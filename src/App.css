@@ -10,22 +10,6 @@
   background-color: lightskyblue;
 }
 
-.header {
-  grid-area: header;
-  background-color: aquamarine;
-}
 
-.header img {
-  width: 50px;
-  height: 50px;
-}
 
-.nav {
-  grid-area: nav;
-  background-color: lightgreen;
-}
 
-.content {
-  grid-area: content;
-  background-color: lightseagreen;
-}
