@@ -10,6 +10,9 @@
   background-color: lightskyblue;
 }
 
-
+.app-wrapper-content {
+    grid-area: content;
+    background-color: MediumPurple;
+}
 
 

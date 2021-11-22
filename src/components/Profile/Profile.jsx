@@ -1,11 +1,11 @@
 import React from 'react';
-import classes from './Profile.module.css';
+// import classes from './Profile.module.css';
 import photo from '../../images/ProfileHeaderPhoto.jpg'
-import MyPosts from './My posts/MyPosts';
+import MyPosts from './MyPosts/MyPosts.jsx';
 
-const Content = () => {
+const Profile = () => {
   return (
-    <div className={classes.content}>
+    <div>
       <div>
         <img
           alt='prop'
@@ -19,4 +19,4 @@ const Content = () => {
   )
 }
 
-export default Content;
+export default Profile;

@@ -3,6 +3,7 @@ import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 
 
+
 const MyPosts = () => {
   return (
     <div>
@@ -12,7 +13,9 @@ const MyPosts = () => {
         <button>Add</button>
       </div>
       <div className={classes.posts}>
-        <Post />
+        <Post message='Hello React, it is my first post!)' countLikes='11'/>
+        <Post message='Good luck man!' countLikes='21'/>
+        <Post message='Be Anxious for Nothing!' countLikes='12'/>
       </div>
     </div>
   )
