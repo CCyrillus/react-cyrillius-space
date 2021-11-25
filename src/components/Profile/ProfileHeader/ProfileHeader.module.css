@@ -1,0 +1,32 @@
+.profileHeader {}
+
+.descriptionBlock {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  padding: 10px;
+}
+
+.imgHeader {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 175px;
+}
+
+.imgAvatar {
+  max-width: 130px;
+  margin-left: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+.imageBlock {
+  background-color: #9a75d6;
+}
+
+.txtBlock {
+
+  background-color: #4073ad;
+}

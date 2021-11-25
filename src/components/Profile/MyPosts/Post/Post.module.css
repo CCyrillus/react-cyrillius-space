@@ -1,9 +1,9 @@
 
 .item {
-  color: red;
+  color: #C4C4C4;
 }
 
 .item img{
-  width: 50px;
+  width : 50px;
   border-radius: 50%;
 }

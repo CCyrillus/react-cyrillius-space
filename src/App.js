@@ -7,7 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import Music from './components/MusicPage/Music';
 import News from './components/News/News';
 import Settings from './components/SettingsPage/Settings';
-import Message from './components/Message/Message';
+import Dialog from './components/Dialog/Dialog';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
 
         <Routes>
           <Route path='/profile' element={<Profile />} />
-          <Route path='/dialogs' element={<Message />} />
+          <Route path='/dialogs/*' element={<Dialog />} />
           <Route path='/news' element={<News />} />
           <Route path='/music' element={<Music />} />
           <Route path='/settings' element={<Settings />} />

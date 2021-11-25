@@ -7,12 +7,14 @@
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
-  background-color: lightskyblue;
+  
+  
 }
 
 .app-wrapper-content {
     grid-area: content;
-    background-color: MediumPurple;
+    background-color: #141430a1;
+    border-radius: 10px;
 }
 
 

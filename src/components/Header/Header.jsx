@@ -1,11 +1,15 @@
 import React from "react"
 import classes from './Header.module.css';
-import logo from '../../images/Logo.png';
+import logo from '../../images/Logo3.png';
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className={classes.header}>
-      <img src={logo} alt="Logo"/>
+      <NavLink to='/'>
+        <img src={logo} alt="Logo" className={classes.img} />
+      </NavLink>
+
     </header>
   )
 }

@@ -1,9 +1,11 @@
 .header {
   grid-area: header;
-  background-color: MediumOrchid;
+  background-color: #494B57;
+  border-radius: 10px;
 }
 
-.header img {
+.img {
   width: 50px;
   height: 50px;
+  padding: 5px;
 }
