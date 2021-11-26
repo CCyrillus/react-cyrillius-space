@@ -3,11 +3,14 @@ import React from 'react';
 import MyPosts from './MyPosts/MyPosts.jsx';
 import ProfileHeader from './ProfileHeader/ProfileHeader.jsx'
 
-const Profile = () => {
+const Profile = (props) => {
+
+
+
   return (
     <div>
       <ProfileHeader/>
-      <MyPosts/>
+      <MyPosts postsData={props.postsData}/>
     </div>
   )
 }

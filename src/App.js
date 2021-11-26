@@ -9,8 +9,11 @@ import News from './components/News/News';
 import Settings from './components/SettingsPage/Settings';
 import Dialog from './components/Dialog/Dialog';
 
-function App() {
+function App(props) {
+
+
   return (
+
 
     <div className='app-wrapper'>
       <Header />
@@ -18,8 +21,8 @@ function App() {
       <div className='app-wrapper-content'>
 
         <Routes>
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/dialogs/*' element={<Dialog />} />
+          <Route path='/profile' element={<Profile postsData={props.postsData} />} />
+          <Route path='/dialogs/*' element={<Dialog dialogsData={props.dialogsData} messagesData={props.messagesData} />} />
           <Route path='/news' element={<News />} />
           <Route path='/music' element={<Music />} />
           <Route path='/settings' element={<Settings />} />
