@@ -5,7 +5,7 @@ import Post from './Post/Post';
 
 
 const MyPosts = (props) => {
-
+ 
   let postArray = (props.postsData).map(num => (<Post message={num.message} countLikes={num.likes} />))
 
   return (

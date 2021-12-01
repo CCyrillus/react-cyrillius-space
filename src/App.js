@@ -8,10 +8,11 @@ import Music from './components/MusicPage/Music';
 import News from './components/News/News';
 import Settings from './components/SettingsPage/Settings';
 import Dialog from './components/Dialog/Dialog';
+import Friends from './components/Friends/Friends';
 
 function App(props) {
 
-
+  
   return (
 
 
@@ -21,11 +22,14 @@ function App(props) {
       <div className='app-wrapper-content'>
 
         <Routes>
-          <Route path='/profile' element={<Profile postsData={props.postsData} />} />
-          <Route path='/dialogs/*' element={<Dialog dialogsData={props.dialogsData} messagesData={props.messagesData} />} />
+          <Route path='/profile'
+            element={<Profile state={props.state.profilePage} />} />
+          <Route path='/dialogs/*'
+            element={<Dialog state={props.state.dialogPage}/>} />
           <Route path='/news' element={<News />} />
           <Route path='/music' element={<Music />} />
           <Route path='/settings' element={<Settings />} />
+          <Route path='/friends' element={<Friends />} />
         </Routes>
 
       </div>

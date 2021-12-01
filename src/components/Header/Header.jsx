@@ -9,7 +9,6 @@ const Header = () => {
       <NavLink to='/'>
         <img src={logo} alt="Logo" className={classes.img} />
       </NavLink>
-
     </header>
   )
 }
