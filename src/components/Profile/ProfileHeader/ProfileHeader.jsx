@@ -20,7 +20,7 @@ const ProfileHeader = () => {
             src={photo2} />
         </div>
         <div className={s.txtBlock}>
-          <h4>Roy Batty</h4>
+          <h4>Roy :</h4>
           “Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain.“
         </div>
       </div>

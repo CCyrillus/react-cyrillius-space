@@ -1,7 +1,11 @@
-.profileHeader {}
+.profileHeader {
+  
+}
 
 .descriptionBlock {
   display: grid;
+
+  border-radius: 50%;
   grid-template-columns: 2fr 10fr;
   padding: 10px;
 }
@@ -14,6 +18,7 @@
 }
 
 .imgAvatar {
+
   max-width: 130px;
   margin-left: 0;
 }
@@ -23,10 +28,11 @@ h4 {
 }
 
 .imageBlock {
-  background-color: #9a75d6;
+  display: grid;
+  justify-content: center;
 }
 
 .txtBlock {
-
-  background-color: #4073ad;
+  display: grid;
+  align-content: center;
 }
