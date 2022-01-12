@@ -4,8 +4,8 @@ let state = {
 	profilePage: {
 		postsData: [
 			{ message: "Hello React, it is my first post!)", likes: 11 },
-			{ message: "AS WE CAN", likes: 21 },
-			{ message: "Light weight BABY!!", likes: 33 },
+			{ message: "AS WE CAN!", likes: 21 },
+			{ message: "Light weight baby!!", likes: 33 },
 			{ message: "No Country for Old Men!)", likes: 19 },
 		],
 	},
@@ -35,7 +35,7 @@ export const addPost = (postMessage) => {
 	let newPost = {
 		id: 5,
 		message: postMessage,
-		likes: 0,
+		likes: Math.floor(Math.random() * 36),
 	};
 	state.profilePage.postsData.push(newPost);
   renderEntireTree(state);
