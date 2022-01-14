@@ -11,6 +11,7 @@ import Dialog from "./components/Dialog/Dialog";
 import Friends from "./components/Friends/Friends";
 
 function App(props) {
+
 	return (
 		<div className="app-wrapper">
 			<Header />
@@ -21,8 +22,9 @@ function App(props) {
 						path="/profile"
 						element={
 							<Profile
-								state={props.state.profilePage}
+                profilePage={props.state.profilePage}
 								addPost={props.addPost}
+                updateNewPostText={props.updateNewPostText}
 							/>
 						}
 					/>

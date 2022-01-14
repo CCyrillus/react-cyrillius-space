@@ -8,6 +8,7 @@ let state = {
 			{ message: "Light weight baby!!", likes: 33 },
 			{ message: "No Country for Old Men!)", likes: 19 },
 		],
+    newPostText:"Type something"
 	},
 	dialogPage: {
 		dialogsData: [
@@ -30,14 +31,20 @@ let state = {
 	},
 };
 
-export const addPost = (postMessage) => {
+window.state = state;
+
+export const addPost = () => {
  
 	let newPost = {
 		id: 5,
-		message: postMessage,
+		message: state.profilePage.newPostText,
 		likes: Math.floor(Math.random() * 36),
 	};
 	state.profilePage.postsData.push(newPost);
+  renderEntireTree(state);
+};
+export const updateNewPostText = (newText) => {
+	state.profilePage.newPostText = newText;
   renderEntireTree(state);
 };
 
