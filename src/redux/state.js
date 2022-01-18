@@ -1,4 +1,6 @@
-import { renderEntireTree } from "../render";
+let renderEntireTree = () => {
+  console.log('QWERTY')
+};
 
 let state = {
 	profilePage: {
@@ -8,7 +10,7 @@ let state = {
 			{ message: "Light weight baby!!", likes: 33 },
 			{ message: "No Country for Old Men!)", likes: 19 },
 		],
-    newPostText:"Type something"
+		newPostText: "Type something",
 	},
 	dialogPage: {
 		dialogsData: [
@@ -34,18 +36,19 @@ let state = {
 window.state = state;
 
 export const addPost = () => {
- 
 	let newPost = {
 		id: 5,
 		message: state.profilePage.newPostText,
 		likes: Math.floor(Math.random() * 36),
 	};
 	state.profilePage.postsData.push(newPost);
-  renderEntireTree(state);
+	renderEntireTree(state);
 };
 export const updateNewPostText = (newText) => {
 	state.profilePage.newPostText = newText;
-  renderEntireTree(state);
+	renderEntireTree(state);
 };
-
+export const subscribe = (observer) => {
+	renderEntireTree = observer; // !! observer PATTERN !!
+};
 export default state;
