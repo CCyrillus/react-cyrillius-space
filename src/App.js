@@ -22,7 +22,7 @@ function App(props) {
 						path="/profile"
 						element={
 							<Profile
-                profilePage={props.state.profilePage}
+                profilePage={props.state.getState().profilePage}
 								addPost={props.addPost}
                 updateNewPostText={props.updateNewPostText}
 							/>
@@ -30,7 +30,7 @@ function App(props) {
 					/>
 					<Route
 						path="/dialogs/*"
-						element={<Dialog state={props.state.dialogPage} />}
+						element={<Dialog state={props.state.getState().dialogPage} />}
 					/>
 					<Route path="/news" element={<News />} />
 					<Route path="/music" element={<Music />} />
