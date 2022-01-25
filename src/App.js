@@ -11,7 +11,6 @@ import Dialog from "./components/Dialog/Dialog";
 import Friends from "./components/Friends/Friends";
 
 function App(props) {
-
 	return (
 		<div className="app-wrapper">
 			<Header />
@@ -22,14 +21,19 @@ function App(props) {
 						path="/profile"
 						element={
 							<Profile
-                profilePage={props.state.getState().profilePage}
-								dispatch = {props.dispatch}
+								profilePage={props.state.getState().profilePage}
+								dispatch={props.dispatch}
 							/>
 						}
 					/>
 					<Route
 						path="/dialogs/*"
-						element={<Dialog state={props.state.getState().dialogPage} />}
+						element={
+							<Dialog
+								state={props.state.getState()}
+								dispatch={props.dispatch}
+							/>
+						}
 					/>
 					<Route path="/news" element={<News />} />
 					<Route path="/music" element={<Music />} />
