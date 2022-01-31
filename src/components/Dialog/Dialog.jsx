@@ -12,12 +12,12 @@ const Dialog = (props) => {
 	let messageArray = props.state.dialogPage.messagesData.map((m) => (
 		<Message txt={m.txt} id={m.id} />
 	));
-	let newPostElement = React.createRef();
+	// let newPostElement = React.createRef();
 	let addMessage = () => {
 		props.dispatch(addMessageCreator());
 	};
-	let onMessageChange = () => {
-		let newText = newPostElement.current.value;
+	let onMessageChange = (e) => {
+		let newText = e.target.value;
 		props.dispatch(updateNewMessageCreator(newText));
 	};
 
@@ -31,7 +31,7 @@ const Dialog = (props) => {
 				<div className={s.textArea}>
 					<div>
 						<textarea
-							ref={newPostElement}
+							// ref={newPostElement}
 							value={props.state.dialogPage.newMessageText}
 							onChange={onMessageChange}
 						></textarea>
