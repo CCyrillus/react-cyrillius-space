@@ -9,6 +9,7 @@ import News from "./components/News/News";
 import Settings from "./components/SettingsPage/Settings";
 import Dialog from "./components/Dialog/Dialog";
 import Friends from "./components/Friends/Friends";
+import store from "./redux/redux-store";
 
 function App(props) {
 	return (
@@ -17,20 +18,12 @@ function App(props) {
 			<Navbar />
 			<div className="app-wrapper-content">
 				<Routes>
-					<Route
-						path="/profile"
-						element={
-							<Profile
-								profilePage={props.state.getState().profilePage}
-								dispatch={props.dispatch}
-							/>
-						}
-					/>
+					<Route path="/profile" element={<Profile store={store} />} />
 					<Route
 						path="/dialogs/*"
 						element={
 							<Dialog
-								state={props.state.getState()}
+								state={props.store.getState()}
 								dispatch={props.dispatch}
 							/>
 						}
