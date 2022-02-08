@@ -7,9 +7,9 @@ import { Route, Routes } from "react-router-dom";
 import Music from "./components/MusicPage/Music";
 import News from "./components/News/News";
 import Settings from "./components/SettingsPage/Settings";
-import Dialog from "./components/Dialog/Dialog";
 import Friends from "./components/Friends/Friends";
 import store from "./redux/redux-store";
+import DialogContainer from "./components/Dialog/DialogContainer";
 
 function App(props) {
 	return (
@@ -19,15 +19,7 @@ function App(props) {
 			<div className="app-wrapper-content">
 				<Routes>
 					<Route path="/profile" element={<Profile store={store} />} />
-					<Route
-						path="/dialogs/*"
-						element={
-							<Dialog
-								state={props.store.getState()}
-								dispatch={props.dispatch}
-							/>
-						}
-					/>
+					<Route path="/dialogs/*" element={<DialogContainer store={store} />} />
 					<Route path="/news" element={<News />} />
 					<Route path="/music" element={<Music />} />
 					<Route path="/settings" element={<Settings />} />
