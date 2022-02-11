@@ -8,7 +8,6 @@ import Music from "./components/MusicPage/Music";
 import News from "./components/News/News";
 import Settings from "./components/SettingsPage/Settings";
 import Friends from "./components/Friends/Friends";
-import store from "./redux/redux-store";
 import DialogContainer from "./components/Dialog/DialogContainer";
 
 function App(props) {
@@ -18,8 +17,8 @@ function App(props) {
 			<Navbar />
 			<div className="app-wrapper-content">
 				<Routes>
-					<Route path="/profile" element={<Profile store={store} />} />
-					<Route path="/dialogs/*" element={<DialogContainer store={store} />} />
+					<Route path="/profile" element={<Profile />} />
+					<Route path="/dialogs/*" element={<DialogContainer />} />
 					<Route path="/news" element={<News />} />
 					<Route path="/music" element={<Music />} />
 					<Route path="/settings" element={<Settings />} />

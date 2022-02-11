@@ -5,20 +5,20 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import {Provider} from './StoreContext';
 
 let _rerenderTree = (state) => {
 	debugger;
 
 	ReactDOM.render(
-		<React.StrictMode>
-			<BrowserRouter>
-				<App
-					store={store}
-					state={state}
-					dispatch={store.dispatch.bind(store)}
-				/>
-			</BrowserRouter>
-		</React.StrictMode>,
+		<Provider store = {store}>
+			<React.StrictMode>
+				<BrowserRouter>
+					<App/>
+				</BrowserRouter>
+			</React.StrictMode>
+		</Provider>,
+
 		document.getElementById("root")
 	);
 };
