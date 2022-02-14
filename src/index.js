@@ -5,11 +5,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import {Provider} from './StoreContext';
+import { Provider } from 'react-redux';
 
 let _rerenderTree = (state) => {
-	debugger;
-
 	ReactDOM.render(
 		<Provider store = {store}>
 			<React.StrictMode>

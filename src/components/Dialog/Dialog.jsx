@@ -4,12 +4,10 @@ import DialogItem from "./DialogItem/DialogItem.jsx";
 import Message from "./Message/Message.jsx";
 
 const Dialog = (props) => {
-  debugger;
-
-	let dialogItem = props.dialogPage.dialogsData.map((d) => (
+	let dialogItem = props.dialogsData.map((d) => (
 		<DialogItem name={d.name} id={d.id} />
 	));
-	let messageArray = props.dialogPage.messagesData.map((m) => (
+	let messageArray = props.messagesData.map((m) => (
 		<Message txt={m.txt} id={m.id} />
 	));
 	let newMessageElement = React.createRef();
@@ -18,7 +16,7 @@ const Dialog = (props) => {
 	};
 	let onMessageChange = () => {
 		let newText = newMessageElement.current.value;
-		props.updateNewMessageCreator(newText);
+		props.updateNewMessageBody(newText);
 	};
 
 	return (

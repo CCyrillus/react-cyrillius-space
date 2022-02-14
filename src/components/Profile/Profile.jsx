@@ -4,7 +4,6 @@ import ProfileHeader from "./ProfileHeader/ProfileHeader.jsx";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 const Profile = (props) => {
-
 	return (
 		<div className={s.profilePage}>
 			<ProfileHeader />
