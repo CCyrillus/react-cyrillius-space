@@ -14,8 +14,6 @@ let mapStateToProps = (state) => {
 	};
 };
 let mapDispatchToProps = (dispatch) => {
-  debugger;
-
 	return {
 		updateNewMessageBody: (newText) => {
       let action = updateNewMessageCreator(newText);
