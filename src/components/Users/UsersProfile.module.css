@@ -1,0 +1,7 @@
+.users {}
+
+.avatar {
+  width: 85px;
+  height: 85px;
+  border-radius: 50px;
+}
