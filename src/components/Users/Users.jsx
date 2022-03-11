@@ -1,46 +1,32 @@
+import * as axios from "axios";
 import React from "react";
 import s from "./UsersProfile.module.css";
+import ava from "../../images/Ava1.png";
 
 const Users = (props) => {
-	if (props.users.length === 0) {
-		props.setUsers([
-			{
-				id: 1,
-				photoUrl: "http://www.kinofilms.ua/images/person/big/2748.jpg",
-				name: "Cyrill",
-				surname: "Cherevatyi",
-				status: "IDI NAHUI RUS KORABULb",
-				location: { country: "Ukraine", city: "Dnipro" },
-				followed: true,
-			},
-			{
-				id: 2,
-				photoUrl: "http://www.kinofilms.ua/images/person/big/2748.jpg",
-				name: "Hlib",
-				surname: "Pan",
-				status: "I am Boss!",
-				location: { country: "Ukraine", city: "Kiev" },
-				followed: true,
-			},
-			{
-				id: 3,
-				photoUrl: "http://www.kinofilms.ua/images/person/big/2748.jpg",
-				name: "Marianna",
-				surname: "Bass",
-				status: "Я в рашке, но в душе с вами",
-				location: { country: "Russia", city: "Samara" },
-				followed: false,
-			},
-		]);
-	}
+	let getUsers = () => {
+		if (props.users.length === 0) {
+			axios
+				.get("https://social-network.samuraijs.com/api/1.0/users")
+				.then((response) => {
+					debugger;
+					props.setUsers(response.data.items);
+				});
+		}
+	};
 
 	return (
 		<div className={s.users}>
+			<button onClick={getUsers}>Get</button>
 			{props.users.map((i) => (
 				<div key={i.id}>
 					<span>
 						<div>
-							<img src={i.photoUrl} alt="prop" className={s.avatar} />
+							<img
+								src={i.photos.small != null ? i.photos.small : ava}
+								alt="prop"
+								className={s.avatar}
+							/>
 						</div>
 						<div>
 							{i.followed ? (
@@ -68,8 +54,8 @@ const Users = (props) => {
 							<div>{i.status}</div>
 						</span>
 						<span>
-							<div>{i.location.country}</div>
-							<div>{i.location.city}</div>
+							<div>{"i.location.country"}</div>
+							<div>{"i.location.city"}</div>
 						</span>
 					</span>
 				</div>
