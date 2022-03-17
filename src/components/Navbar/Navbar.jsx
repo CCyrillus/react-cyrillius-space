@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 import s from "./Navbar.module.css";
 // import users from "../../images/userss_logo.png";
 import n from "../../images/Ava1.png";
-
 let activeLink = (navData) => (navData.isActive ? s.active : s.item);
 
 const Navbar = () => {
+
 	return (
 		<nav className={s.nav}>
 			<div className={s.item}>

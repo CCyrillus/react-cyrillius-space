@@ -16,14 +16,15 @@
   text-decoration: none;
 }
 
-/* .usersLink:hover,
+.usersLink:hover,
 .usersLink {
   display: grid;
   justify-content: center;
 
+  color: gold;
   font-size: 200%;
   text-decoration: none;
-} */
+}
 
 .img {
   max-width: 100%;
@@ -43,5 +44,6 @@
   font-size: 12px;
   color: #c6e41b;
   text-align: center;
-  font: bold 80% serif; 
+  font: bold 80% serif;
 }
+

@@ -1,7 +1,24 @@
-.users {}
+.users {
+}
 
 .avatar {
   width: 85px;
   height: 85px;
   border-radius: 50px;
+}
+.paginationList{
+  
+}
+.currentPage {
+  cursor: pointer;
+}
+
+.selectedPage {
+  background-color:cornflowerblue;
+  border: 1px solid;
+  border-radius: 50px;
+  cursor: pointer;
+  text-shadow: 2px 2px 2px lightcoral;
+  font-weight: bold;
+  color: gold;
 }
